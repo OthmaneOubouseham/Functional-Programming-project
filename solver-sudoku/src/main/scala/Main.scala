@@ -87,6 +87,43 @@ object Main extends ZIOAppDefault {
 
     rowValid && colValid && subgridValid
   }
+  // Find the next empty position in the grid
+  def findEmptyPosition(grid: Grid): Option[Position] = {
+    grid.zipWithIndex.flatMap { case (row, rowIndex) =>
+      row.zipWithIndex.collect { case (None, colIndex) =>
+        (rowIndex, colIndex)
+      }
+    }.headOption
+  }
+
+  // Solve the Sudoku grid using backtracking
+  def solveSudokuGrid(grid: Grid): Option[Grid] = {
+    findEmptyPosition(grid) match {
+      case Some((row, col)) =>
+        (1 to 9).to(LazyList).flatMap { digit =>
+          if (isDigitValid(grid, digit, (row, col))) {
+            solveSudokuGrid(grid.updated(row, grid(row).updated(col, Some(digit))))
+          } else {
+            LazyList.empty
+          }
+        }.headOption
+      case None => Some(grid)
+    }
+  }
+
+  // Print the grid to the console
+  def displayGrid(grid: Grid): Unit = {
+    grid.foreach(row => println(row.map(_.getOrElse(0)).mkString(" ")))
+    println()
+  }
+
+  // Save the solved grid as JSON to a file
+  def saveSudokuToJson(grid: Grid): Unit = {
+    val writer = new PrintWriter(new File("solved.json"))
+    val jsonGrid = grid.map(row => row.map(_.getOrElse(0)))
+    writer.write(jsonGrid.toJson)
+    writer.close()
+  }
 
 
  
