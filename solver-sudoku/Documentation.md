@@ -76,10 +76,8 @@ Ensure that the necessary dependencies (ZIO and zio-json) are specified in your 
 ## Output :
 ### Solvable soduku
 ![Screenshot from 2023-07-09 21-01-22.png](Images%2FScreenshot%20from%202023-07-09%2021-01-22.png)
-![Screenshot from 2023-07-09 21-02-13.png](..%2F..%2FPictures%2FScreenshots%2FScreenshot%20from%202023-07-09%2021-02-13.png)
-
+![Screenshot from 2023-07-09 21-02-13.png](Images%2FScreenshot%20from%202023-07-09%2021-02-13.png)
 ### invalid grid 
-![Screenshot from 2023-07-09 21-01-22.png](..%2F..%2FPictures%2FScreenshots%2FScreenshot%20from%202023-07-09%2021-01-22.png)
-
+![Screenshot from 2023-07-09 21-01-22.png](Images%2FScreenshot%20from%202023-07-09%2021-01-22.png)
 ### invalid Path!
-![Screenshot from 2023-07-09 21-15-54.png](..%2F..%2FPictures%2FScreenshots%2FScreenshot%20from%202023-07-09%2021-15-54.png)
+![Screenshot from 2023-07-09 21-15-54.png](Images%2FScreenshot%20from%202023-07-09%2021-15-54.png)
