@@ -67,7 +67,7 @@ Ensure that the necessary dependencies (ZIO and zio-json) are specified in your 
 # RUN
 1.   Compile and run the application code using a Scala compiler or an integrated development environment (IDE).
 
-2.   When prompted, enter the path to the JSON file containing the Sudoku problem.
+2.   When prompted, enter the path to the JSON file containing the Sudoku problem (Absolute Path).
 
 3.   The application will print the initial grid to the console.
 
